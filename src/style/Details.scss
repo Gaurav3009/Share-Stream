@@ -1,0 +1,92 @@
+@import './Variables.scss';
+
+.profile {
+    flex: 70%;
+    background: rgb(189,144,154);
+    background: linear-gradient(180deg,rgba(189,144,154,1) 20%,rgba(18,19,48,0) 72%);
+    overflow: scroll;
+
+    .head {
+        padding: 0.5rem 0.4rem 0 0;
+        display:flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        #btn {
+            color: white;
+        }
+        #notifi {
+            padding: 0 0 0 0.8rem;
+        }
+    }
+
+    .name-desc {
+        display:flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 3rem;
+
+        .details { 
+            padding-left: 1rem;
+
+            h1 {
+                color: #569DAA;
+                font-size: 3rem;
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+            }   
+            p {
+                text-align: justify;
+                color: rgb(225, 208, 208);
+            }
+        }
+    }
+    .vid {
+
+        display: flex;
+        flex-direction: column;
+
+            h2 { 
+                color: whitesmoke;
+                text-transform: uppercase;
+                font-weight: lighter;
+                margin-left: 2rem;
+            }
+        
+
+        .video {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+    
+            
+    
+            #card {
+                margin: 2rem;
+                width: 106%;
+                transition: ease-in-out 0.5s;
+    
+                &:hover {
+                    scale: 110%;
+                }
+    
+                .fav {
+                    background-color: red;
+                }
+            }
+    
+            #desc {
+                padding: 0;
+            }
+            #cont {
+                padding: 0 0.8rem;
+            }
+            #btn2 {
+                margin-left: -1rem;
+            }
+        }
+    }
+}
+    

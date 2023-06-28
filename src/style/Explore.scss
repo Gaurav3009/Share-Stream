@@ -1,0 +1,127 @@
+@import"./Variables.scss";
+
+.top-level {
+    flex: 70%;
+    background: radial-gradient(100% 120% at bottom left, rgb(195, 172, 208) , rgb(26, 25, 54) 80%);
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+    .header {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+        margin: 1.8rem;
+        height: 9vh;
+        .search {
+            flex: 80%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-end;
+            height: 60%;
+
+            input {
+                width: 65%;
+                margin-right: 5rem;
+                height: 70%;
+                background-color: #1a1936;
+                color: $color-primary;
+                border-radius: 30px;
+                padding: 0.4rem 0.4rem 0.4rem 2rem;
+                outline: none;
+                border: 1px solid $color-secondary;
+                font-size: 1rem;
+
+                &:focus {
+                    border: 1px solid #93BFCF;
+                }
+            }
+        }
+
+        .profile-nav {
+            flex: 20%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-end;
+            padding-right: 2.5rem;
+
+            #notifi {
+                margin-right: 2rem;
+            }
+        }
+    }
+
+    .option {
+        #tabs {
+            color: $color-primary;
+            margin-left: 2.3rem;
+            background-color: #303041;
+            border-radius: 10px;
+            text-transform: capitalize;
+
+            &:hover {
+                background-color: darken($color: #303041, $amount: 5);
+            }
+        }
+    }
+.video {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        #card {
+            margin: 2rem;
+            width: 106%;
+            transition: ease-in-out 0.5s;
+
+            &:hover {
+                scale: 110%;
+            }
+
+            .fav {
+                background-color: red;
+            }
+        }
+
+        #desc {
+            padding: 0;
+        }
+        #cont {
+            padding: 0 0.8rem;
+        }
+        #btn2 {
+            margin-left: -1rem;
+        }
+    }
+    .video {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        #card {
+            margin: 2rem;
+            width: 106%;
+            transition: ease-in-out 0.5s;
+
+            &:hover {
+                scale: 110%;
+            }
+
+            .fav {
+                background-color: red;
+            }
+        }
+
+        #desc {
+            padding: 0;
+        }
+        #cont {
+            padding: 0 0.8rem;
+        }
+        #btn2 {
+            margin-left: -1rem;
+        }
+    }
+}

@@ -1,0 +1,10 @@
+.top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    #player {
+        height: 80vh;
+        width: 60vw;
+    }
+}

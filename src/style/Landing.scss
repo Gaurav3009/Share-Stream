@@ -1,0 +1,228 @@
+@import"./Variables.scss";
+html,
+body {
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+.anim {
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+    // background-image: url('../images/bg.jpg');
+    // background-size: cover;
+    color: white;
+    display: flex;
+    align-items: center;
+    // padding-left: 4rem;
+    flex-direction: row;
+    justify-content: center;
+
+    .welcome {
+        text-align: center;
+        z-index: 1;
+        h1 {
+            text-transform: uppercase;
+            letter-spacing: 0.5rem;
+            font-size: 3rem;
+            animation-name: moveInLeft;
+            animation-duration: 1s;
+            animation-timing-function: ease-out;
+
+            span:nth-last-child(1) {
+                color: #fd3465;
+            }
+        }
+
+        h3 {
+            text-transform: uppercase;
+            letter-spacing: 0.2rem;
+            font-size: 1rem;
+            margin-top: -1rem;
+            animation-name: moveInRight;
+            animation-duration: 1s;
+            animation-timing-function: ease-out;
+        }
+    
+        @keyframes moveInBottom {
+            0%{
+                opacity: 0;
+                transform: translateY(3rem);
+            }
+        
+            100%{
+                opacity: 1;
+                transform: translate(0);
+            }
+        }
+        
+        .btn, .btn:visited{
+            text-transform: uppercase;
+            text-decoration: none;
+            padding: 1rem 1.5rem;
+            display: inline-block;
+            border-radius: 10rem;
+            border: none;
+            transition: all 0.2s;
+            position: relative;
+            background-color: red;
+        }
+        
+        .btn:hover{
+           transform: translateY(-3px);
+           box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); 
+           cursor: pointer;
+        }
+        
+        .btn:active{
+            transform: translateY(-1px);
+            box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.2); 
+        }
+        
+        .btn--red{
+            background-color: red;
+            color: $color-secondary;
+        }
+        
+        .btn::after{
+            content: "";
+            display: inline-block;
+            height: 100%;
+            width: 100%;
+            border-radius: 10rem;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            transition: all 0.4s;
+        }
+        
+        .btn--white::after{
+            background-color: lighten($color: red, $amount: 10);
+        }
+        
+        .btn:hover::after{
+            transform: scaleX(1.4);
+            scaleY:(1.6);
+            opacity: 0;
+        }
+        .btn--animated {
+            animation: moveInBottom 0.5s ease-out 0.75s;
+            animation-fill-mode: backwards;
+        }
+
+        @keyframes moveInLeft {
+            0%{
+                opacity: 0;
+                transform: translateX(-10rem);
+            }
+        
+            80%{
+                transform: translateX(1rem);
+            }
+        
+            100%{
+                opacity: 1;
+                transform: translate(0);
+            }
+        }
+        
+        @keyframes moveInRight {
+            0%{
+                opacity: 0;
+                transform: translateX(10rem);
+            }
+        
+            80%{
+                transform: translateX(-1rem);
+            }
+        
+            100%{
+                opacity: 1;
+                transform: translate(0);
+            }
+        }
+    }
+
+    
+    }
+
+
+  
+  
+  .circle{
+    position: absolute;
+    border-radius: 50%;
+    background-color: #508fb9;
+    animation: ripple 15s infinite;
+    box-shadow: 0px 0px 1px 0px #508fb9;
+  }
+  
+  .small{
+    width: 200px;
+    height: 200px;
+    top: -100px;
+    left: 43vw;
+  }
+  
+  .medium{
+    width: 400px;
+    height: 400px;
+    top: -200px;
+    left: 37vw;
+  }
+  
+  .large{
+    width: 600px;
+    height: 600px;
+    top: -300px;
+    left: 30vw;
+  }
+  
+  .xlarge{
+    width: 800px;
+    height: 800px;
+    top: -400px;
+    left: 23.5vw;
+  }
+  
+  .xxlarge{
+    width: 1000px;
+    height: 1000px;
+    top: -500px;
+    left: 16.5vw;
+  }
+  
+  .shade1{
+    opacity: 0.2;
+  }
+  .shade2{
+    opacity: 0.5;
+  }
+  
+  .shade3{
+    opacity: 0.7;
+  }
+  
+  .shade4{
+    opacity: 0.5;
+  }
+  
+  .shade5{
+    opacity: 0.9;
+  }
+  
+  @keyframes ripple{
+    0%{
+      transform: scale(0.8);
+    }
+    
+    50%{
+      transform: scale(1.2);
+    }
+    
+    100%{
+      transform: scale(0.8);
+    }
+  }
+  

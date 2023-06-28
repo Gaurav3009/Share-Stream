@@ -1,0 +1,89 @@
+@import "./Variables.scss";
+.panel {
+    flex: 5%;
+    text-align: center;
+    display : flex;
+    flex-direction: column;
+    margin-top: -1rem;
+    .head {
+        h3 {
+            font-size: 2rem;
+
+            #end {
+                color: #fd3465;
+            }
+        }
+        p {
+            font-size: 0.48rem;
+            margin-top: -30px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        button {
+            width: 8rem;
+            height: 2.5rem;
+            font-size: 1rem;
+            border-radius: 30px;
+            background-color: #ff3465;
+            color: white;
+            font-weight: bold;
+            margin-top: 1rem;
+
+            div {
+                padding: 0;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-around;
+                
+                span:nth-last-child(1) {
+                    margin-left: -1.5rem;
+                }
+            }
+
+            &:hover {
+                background-color: darken($color: #ff3465, $amount: 10);
+                cursor: pointer;
+            }
+        }
+
+        
+    }
+    .nlist {
+        margin-top: 0.7rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h3 {
+            color: whitesmoke;
+            text-transform: uppercase;
+            font-weight: lighter;
+        }
+        
+        .list {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            font-size: 1.1rem;
+            color: $color-secondary;
+            width : 9rem;
+            justify-content: space-evenly;
+            margin-top: 0.5rem;;
+            span:first-child {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+            span:nth-last-child(1){
+                margin-left: 0.8rem;
+                height: 100%;
+                width: 80%; 
+            }
+            &:hover {
+                color: lighten($color: $color-secondary, $amount: 20);
+                cursor: pointer;
+            }
+        }
+    }
+}
